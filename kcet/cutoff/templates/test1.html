@@ -1,0 +1,14 @@
+
+
+<form method="post">
+  <input type="number"  name="rank">
+  <input type="submit" value="Submit">
+  {% csrf_token %}
+</form>
+
+{% if result %}
+{% for i in result %}
+<p>College: </p> {{i.college}}<br>
+<p>Rank: </p>{{i.gm}}<br><hr>
+{% endfor %}
+{% endif %}
